@@ -1,0 +1,16 @@
+node_modules/
+desktop/build.noindex/
+desktop/output/
+config.json
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.tsbuildinfo
+coverage/
+credentials/
+hosts.yml
+token
+*.pem
+*.key

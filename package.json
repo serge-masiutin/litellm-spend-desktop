@@ -1,0 +1,22 @@
+{
+  "name": "litellm-spend",
+  "version": "1.3.2",
+  "private": true,
+  "description": "Мониторинг расходов и цен LiteLLM для агентов: остаток ключа, оповещения, цены моделей из шлюза",
+  "type": "module",
+  "bin": { "litellm-spend": "./bin/litellm-spend.ts" },
+  "scripts": {
+    "test": "bun test ./test",
+    "typecheck": "tsc --noEmit",
+    "build": "bash desktop/build.sh",
+    "smoke": "bun desktop/smoke.ts",
+    "check": "bun run typecheck && bun run test"
+  },
+  "packageManager": "bun@1.3.12",
+  "devDependencies": {
+    "@types/bun": "1.3.12",
+    "@types/node": "22.19.7",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

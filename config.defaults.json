@@ -1,0 +1,78 @@
+{
+  "keyBudget": {
+    "thresholdsPercent": [
+      50,
+      75,
+      90
+    ],
+    "resetHourUtc": 0
+  },
+  "forecast": {
+    "windowMinutes": 60,
+    "minSpanMinutes": 10,
+    "criticalMinutes": 60
+  },
+  "session": {
+    "tiers": [
+      {
+        "minOutputPricePerMillion": 15,
+        "stepUsd": 3
+      },
+      {
+        "minOutputPricePerMillion": 5,
+        "stepUsd": 5
+      },
+      {
+        "minOutputPricePerMillion": 0,
+        "stepUsd": 2
+      }
+    ],
+    "unpricedStepUsd": 5
+  },
+  "spike": {
+    "minSteps": 5,
+    "multiplier": 3,
+    "minStepUsd": 0.25,
+    "cooldownMinutes": 10
+  },
+  "context": {
+    "thresholdsTokens": [
+      150000,
+      250000,
+      400000
+    ],
+    "tierWarnFraction": 0.9,
+    "criticalInputUsd": 0.1,
+    "criticalWindowFraction": 0.9,
+    "riskCooldownMinutes": 10
+  },
+  "cache": {
+    "minContextTokens": 100000,
+    "minReadRatio": 0.5,
+    "consecutiveSteps": 2
+  },
+  "report": {
+    "activeWithinMinutes": 10,
+    "topSessions": 5,
+    "lastAlerts": 10
+  },
+  "litellm": {
+    "baseUrl": "https://litellm.example.com",
+    "keyFile": "~/.config/litellm-spend/key",
+    "keyEnv": "LITELLM_API_KEY",
+    "userAgent": "litellm-spend/1.0"
+  },
+  "models": {
+    "providerId": "litellm",
+    "refreshMinutes": 60
+  },
+  "notify": {
+    "channels": [
+      "system"
+    ],
+    "webhookEnv": "LITELLM_SPEND_WEBHOOK"
+  },
+  "storage": {
+    "dir": "~/.local/share/litellm-spend"
+  }
+}
